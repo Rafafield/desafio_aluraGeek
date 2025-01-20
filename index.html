@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Alura Geek</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="imagemLogo">
+                <img class="logoAluraGeek" src="/assets/Logo.png" alt="Logo do Alura Geek">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="containerLoja">
+            <section>
+                <div class="adicionarProdutos">
+                    <h1 class="adicionarProduto">ADICIONAR PRODUTO</h1>
+                    <div class="containerFormulario">
+                        <form class="formularioAddProduto">
+                            <label for="nomeProduto"></label>
+                            <input type="text" id="nomeProduto" class="botaoNomeProduto" placeholder="Nome..." required>
+                            
+                            <label for="valorProduto" ></label>
+                            <input type="text" id="valorProduto" class="botaoValorProduto" placeholder="Valor..." required>
+                            
+                            <label for="fotoProduto"></label>
+                            <div class="botaoUploadContainer">
+                                <input type="file" id="fotoProduto" class="uploadArquivo" accept="image/*" placeholder="Imagem..." onchange="atualizarBotaoImagem()">
+                                <label for="fotoProduto" class="botaoUploadImagem">Imagem...</label>
+                            </div>
+                            <div class="btnGuardarLimpar">
+                                <button type="button" id="adicionarProduto" class="botaoAdicionar">Guardar</button>
+                                <button type="button" id="btnLimpar" class="botaoLimpar">Limpar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="meusProdutos">
+                <h2 class="tituloMeusProdutos">MEUS PRODUTOS:</h2>
+                <div class="containerListaProdutos">
+                    <ul class="listaDeProdutos"></ul>
+                  
+                </div>
+            </section>
+        </section>
+    </main>
+<script src="script.js"></script>
+</body>
+
+<footer>
+    <div class="rodape">
+        <img class="logoAluraGeek" src="/assets/Logo.png" alt="Logo do Alura Geek - Rodapé">
+        <div class="tituloRodape">
+            <p>DESENVOLVIDO POR RAPHAEL MALTEZO</p>
+            <p>ALURA LATAM - 202X</p>
+        </div>
+    </div>
+
+</footer>
+
+
+</html>

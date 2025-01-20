@@ -1,0 +1,332 @@
+/*--------------------ESTILOS GLOBAIS---------------------------*/
+:root {
+    --cor-de-fundo: #ffffff;
+    --cor-de-fundo-rodape: #5d04d9; 
+    --cor-de-fundo-card: #5d04d9; 
+    --cor-de-contorno-botao: #03318c;
+    --cor-de-fundo-botao: #03318c;
+    --cor-do-link: #000000;
+}
+
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: 'IBM Plex Mono', sans-serif;
+    margin: 0rem 0rem 0rem 0rem;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+main {
+    font-family: 'Press Start 2P', cursive;
+    color: #03318c; 
+    margin: 0rem 2rem 2rem 2rem;
+}
+
+/*---------------------------CABECALHO---------------------------*/
+
+.cabecalho {
+    background-color: var(--cor-de-fundo-rodape);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+}
+
+/*-----------------------------CORPO DA PÁGINA---------------------------*/
+
+.containerLoja {
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.meusProdutos {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloMeusProdutos {
+    text-align: center;
+    flex-direction: row;
+    color: var(--cor-do-link);
+    font-size: 30px;
+}
+
+.adicionarProdutos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:var(--cor-do-link);
+    font-size: 24px;
+}
+
+.containerFormulario {
+    color: #03318c;
+}
+
+.formularioAddProduto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'IBM Plex Mono';
+}
+
+input::placeholder, textarea::placeholder {
+    color: #03318c;
+    text-align: left;
+    font-family: 'IBM Plex Mono', sans-serif; 
+    font-size: 14px; 
+}
+
+label, input, textarea {
+    font-family: inherit;
+    text-align: left;
+}
+
+.botaoValorProduto,
+.botaoNomeProduto {
+    display: flex;
+    background-color: #ffffff;
+    border: 3px solid #03318c;
+    color: #03318c; 
+    font-weight: 700;
+    padding: 0.7rem; 
+    font-size: 16px; 
+    border-radius: 35px; 
+    text-align: left; 
+    transition: background-color 0.3s ease;
+    height: 1.4rem;
+}
+
+.botaoUploadImagem {
+    display: block;
+    background-color: #ffffff; 
+    border: 3px solid #03318c;
+    color: #03318c; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 35px; 
+    cursor: pointer; 
+    text-align: left;
+    transition: background-color 0.3s ease; 
+    height: 1.4rem;
+    max-width: 100%;
+    font-weight: 700;
+}
+
+.botaoUpload:hover {
+    background-color: #03318c;
+    color: #ffffff;
+}
+
+.btnGuardarLimpar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+}
+
+.uploadArquivo {
+    display: none;
+}
+
+.botaoAdicionar,
+.botaoLimpar {
+    font-family:'IBM Plex Mono';
+    font-weight: 500;
+    font-size: 20px;
+    flex-grow: 1;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 3px solid #03318c; 
+    color: var(--cor-de-contorno-botao);
+    padding: 10px 20px;
+    border-radius: 35px;
+    cursor: pointer;
+    text-align: center; 
+    transition: background-color 0.3s ease;
+}
+
+.botaoAdicionar:hover,
+.botaoLimpar:hover {
+    background-color: var(--cor-de-contorno-botao); 
+    color: #ffffff; 
+}
+
+.botaoUploadImagem.uploadPronto {
+    color: green;  
+    font-weight: bold;
+    background-color: #e6ffe6;
+}
+
+input:focus {
+    outline: none; 
+    border: 3px solid #03318c;
+    color: #03318c;  
+}
+
+input:focus::placeholder {
+    color: #03318c; 
+}
+
+.containerListaProdutos {
+    display: flex;
+    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.4); 
+    border-radius: 0px; 
+    align-items:flex-start;
+}
+
+h3 {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+.listaDeProdutos {
+    display: grid;
+    flex-direction: s;
+    grid-template-columns: repeat(3, 1fr); 
+    list-style: none;
+    margin: 1rem;
+    width: 100%;
+    gap: 1rem;
+    row-gap: 5rem;
+    font-size: 15px;
+    color: white;
+}
+
+.produto {
+    width: 196px;
+    height: 258px; 
+    text-align: left; 
+    border: 4px solid black; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4); 
+    background-color: var(--cor-de-fundo-card);
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    font-family: 'IBM Plex Mono';
+    font-weight: 800;
+    gap: 1rem;
+    font-size: 15px;
+}
+
+.produto img {
+    max-width: 100%; 
+    border-radius: 4px;
+}
+
+.valorELixeira {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem; 
+    font-size: 16px;
+}
+
+p {
+    margin: 0;
+}
+
+.botaoExcluir:hover {
+   
+    border-radius: 4px;
+}
+
+.botaoExcluir {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0.2rem; 
+}
+
+.botaoExcluir img {
+    display: block; 
+}
+
+/*-----------------------------RODAPÉ----------------------------*/
+
+.rodape {
+    background-color: var(--cor-de-fundo-rodape);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 232px;
+}
+
+.tituloRodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    line-height: 1.2;
+}
+
+/*-----------------------------RESPONSIVIDADE----------------------------*/
+@media (max-width: 1024px) {
+    .cabecalho {
+        background-color: var(--cor-de-fundo-rodape);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 96px;
+    }
+
+    .containerLoja {
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+
+}
+
+/*-----------------------------RESPONSIVIDADE----------------------------*/
+@media (max-width: 430px) {
+    .cabecalho {
+        background-color: var(--cor-de-fundo-rodape);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 96px;
+    }
+
+    .containerLoja {
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+
+      .containerListaProdutos {
+        display: flex;
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        padding-bottom: 10px; 
+        box-shadow: none;
+        border-radius: 0px;
+        align-items:flex-start;
+        
+    }
+
+    .containerListaProdutos::-webkit-scrollbar {
+        height: 8px; 
+    }
+
+    .containerListaProdutos::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.4); 
+        border-radius: 10px;
+    }
+
+    .containerListaProdutos::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.6); 
+    }
+}
