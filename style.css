@@ -253,13 +253,17 @@ p {
 /*-----------------------------RODAPÉ----------------------------*/
 
 .rodape {
-    background-color: var(--cor-de-fundo-rodape);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 232px;
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:var(--cor-de-fundo-rodape);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  }
+
 
 .tituloRodape {
     display: flex;
